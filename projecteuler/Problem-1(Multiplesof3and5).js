@@ -8,4 +8,4 @@ function sumOfMultiple(limit) {
     return sum;
 }
 
-console.log(sumOfMultiple(1000));              
+console.log(sumOfMultiple(100));              
