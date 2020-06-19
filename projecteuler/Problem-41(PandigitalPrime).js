@@ -28,3 +28,16 @@ function searchH(number,index){
     var indexNumber = number[index];
     for(var i = index+1; i < number.length; i++){
         copy = number.slice();
+        copy[index] = number[i];
+        copy[i] = indexNumber;
+
+        searchH(copy,index+1);
+        if(isPrimeArray(copy)){
+            console.log(copy);
+        }
+    }
+};
+
+search([9,8,7,6,5,4,3,2,1]); //None found here
+search([8,7,6,5,4,3,2,1]); //None found here
+search([7,6,5,4,3,2,1]); //First ones found here
